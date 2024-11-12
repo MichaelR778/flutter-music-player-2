@@ -93,53 +93,55 @@ class SongPage extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   // song and artist name
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      // song name
-                                      // Text(
-                                      //   currSong.songName,
-                                      //   style: const TextStyle(
-                                      //     fontWeight: FontWeight.bold,
-                                      //     fontSize: 20,
-                                      //   ),
-                                      // ),
-                                      SizedBox(
-                                        width: 210,
-                                        height: 30,
-                                        child: OverflowText(
-                                          text: currSong.songName,
-                                          textStyle: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        // song name
+                                        // Text(
+                                        //   currSong.songName,
+                                        //   style: const TextStyle(
+                                        //     fontWeight: FontWeight.bold,
+                                        //     fontSize: 20,
+                                        //   ),
+                                        // ),
+                                        SizedBox(
+                                          height: 30,
+                                          child: OverflowText(
+                                            text: currSong.songName,
+                                            textStyle: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20,
+                                            ),
                                           ),
                                         ),
-                                      ),
 
-                                      // artist name
-                                      // Text(
-                                      //   currSong.artistName,
-                                      //   style: TextStyle(
-                                      //     color: Theme.of(context)
-                                      //         .colorScheme
-                                      //         .primary,
-                                      //   ),
-                                      // ),
-                                      SizedBox(
-                                        width: 210,
-                                        height: 20,
-                                        child: OverflowText(
-                                          text: currSong.artistName,
-                                          textStyle: TextStyle(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .primary,
+                                        // artist name
+                                        // Text(
+                                        //   currSong.artistName,
+                                        //   style: TextStyle(
+                                        //     color: Theme.of(context)
+                                        //         .colorScheme
+                                        //         .primary,
+                                        //   ),
+                                        // ),
+                                        SizedBox(
+                                          height: 20,
+                                          child: OverflowText(
+                                            text: currSong.artistName,
+                                            textStyle: TextStyle(
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
+
+                                  const SizedBox(width: 20),
 
                                   // heart icon
                                   const Icon(
@@ -249,7 +251,7 @@ class SongPage extends StatelessWidget {
                     ],
                   ),
 
-                  Expanded(child: Container()),
+                  Flexible(child: Container()),
                 ],
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:isar/isar.dart';
@@ -20,8 +21,11 @@ void main() async {
   // lock to portrait
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  runApp(App(
-    songRepo: IsarSongRepo(isar: isar),
-    playlistRepo: IsarPlaylistRepo(isar: isar),
+  runApp(DevicePreview(
+    enabled: false,
+    builder: (context) => App(
+      songRepo: IsarSongRepo(isar: isar),
+      playlistRepo: IsarPlaylistRepo(isar: isar),
+    ),
   ));
 }

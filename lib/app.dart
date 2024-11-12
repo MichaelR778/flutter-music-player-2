@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:music_bloc/features/audio_player/presentation/components/bottom_tile.dart';
@@ -111,6 +112,8 @@ class App extends StatelessWidget {
           // other listeners if needed
         ],
         child: MaterialApp(
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: ColorScheme.dark(
