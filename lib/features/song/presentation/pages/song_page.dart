@@ -38,34 +38,31 @@ class SongPage extends StatelessWidget {
         return Scaffold(
           body: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+              padding: const EdgeInsets.only(left: 25, right: 25),
               child: Column(
                 children: [
                   // appbar
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // back button
-                        IconButton(
-                          onPressed: () => Navigator.pop(context),
-                          icon: const Icon(Icons.arrow_back),
-                        ),
-
-                        // title
-                        const Text('P L A Y L I S T'),
-
-                        // menu button
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.menu),
-                        ),
-                      ],
-                    ),
-                  ),
-
                   Expanded(child: Container()),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // back button
+                      IconButton(
+                        onPressed: () => Navigator.pop(context),
+                        icon: const Icon(Icons.arrow_back),
+                      ),
+
+                      // title
+                      const Text('P L A Y L I S T'),
+
+                      // menu button
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.menu),
+                      ),
+                    ],
+                  ),
+                  Expanded(flex: 2, child: Container()),
 
                   Column(
                     children: [
@@ -251,7 +248,7 @@ class SongPage extends StatelessWidget {
                     ],
                   ),
 
-                  Flexible(child: Container()),
+                  Expanded(flex: 2, child: Container()),
                 ],
               ),
             ),

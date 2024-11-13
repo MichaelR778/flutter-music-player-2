@@ -20,14 +20,24 @@ class PlaylistTile extends StatelessWidget {
               builder: (context) => PlaylistPage(playlist: playlist),
             ),
           ),
-          child: Image.file(
-            File(playlist.imagePath),
-            width: 150,
-            height: 150,
-            fit: BoxFit.cover,
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: FileImage(File(playlist.imagePath)),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
-        Text(playlist.playlistName),
+        Text(
+          playlist.playlistName,
+          textAlign: TextAlign.center,
+          overflow: TextOverflow.ellipsis,
+        ),
       ],
     );
   }

@@ -31,11 +31,14 @@ class _AddPlaylistPageState extends State<AddPlaylistPage> {
           // image
           BlocBuilder<PreviewCubit, PreviewState>(
             builder: (context, state) {
-              return Center(
-                child: SizedBox(
-                    width: 200,
-                    height: 200,
+              return Row(
+                children: [
+                  Expanded(child: Container()),
+                  Expanded(
+                    flex: 2,
                     child: Image.network(
+                      width: double.infinity,
+                      height: double.infinity,
                       state.imageUrl,
                       fit: BoxFit.cover,
                       loadingBuilder: (context, child, loadingProgress) {
@@ -46,7 +49,10 @@ class _AddPlaylistPageState extends State<AddPlaylistPage> {
                         return LottieBuilder.asset(
                             'assets/image_placeholder.json');
                       },
-                    )),
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                ],
               );
             },
           ),

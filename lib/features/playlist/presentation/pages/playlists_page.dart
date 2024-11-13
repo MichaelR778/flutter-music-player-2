@@ -69,12 +69,17 @@ class _PlaylistsPageState extends State<PlaylistsPage> {
           else if (state is PlaylistLoaded) {
             final playlists = state.playlists;
             return ListView(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               children: [
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.88,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                  ),
                   itemCount: playlists.length,
                   itemBuilder: (context, index) {
                     return PlaylistTile(playlist: playlists[index]);
