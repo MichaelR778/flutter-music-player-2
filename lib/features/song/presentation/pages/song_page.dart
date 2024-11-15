@@ -42,7 +42,7 @@ class SongPage extends StatelessWidget {
               child: Column(
                 children: [
                   // appbar
-                  Expanded(child: Container()),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -62,7 +62,7 @@ class SongPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Expanded(flex: 2, child: Container()),
+                  const Spacer(flex: 2),
 
                   Column(
                     children: [
@@ -248,7 +248,7 @@ class SongPage extends StatelessWidget {
                     ],
                   ),
 
-                  Expanded(flex: 2, child: Container()),
+                  const Spacer(flex: 3),
                 ],
               ),
             ),

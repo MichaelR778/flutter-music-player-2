@@ -33,7 +33,7 @@ class _AddPlaylistPageState extends State<AddPlaylistPage> {
             builder: (context, state) {
               return Row(
                 children: [
-                  Expanded(child: Container()),
+                  const Spacer(),
                   Expanded(
                     flex: 2,
                     child: Image.network(
@@ -51,7 +51,7 @@ class _AddPlaylistPageState extends State<AddPlaylistPage> {
                       },
                     ),
                   ),
-                  Expanded(child: Container()),
+                  const Spacer(),
                 ],
               );
             },

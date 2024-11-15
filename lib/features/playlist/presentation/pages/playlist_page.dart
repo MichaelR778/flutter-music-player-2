@@ -50,15 +50,18 @@ class _PlaylistPageState extends State<PlaylistPage> {
       body: ListView(
         children: [
           // playlist image
-          Center(
-            child: SizedBox(
-              width: 200,
-              height: 200,
-              child: Image.file(
-                File(widget.playlist.imagePath),
-                fit: BoxFit.cover,
+          Row(
+            children: [
+              const Spacer(),
+              Expanded(
+                flex: 2,
+                child: Image.file(
+                  File(widget.playlist.imagePath),
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
+              const Spacer(),
+            ],
           ),
 
           // playlist details

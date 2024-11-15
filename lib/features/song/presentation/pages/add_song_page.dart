@@ -35,7 +35,7 @@ class _AddSongPageState extends State<AddSongPage> {
             builder: (context, state) {
               return Row(
                 children: [
-                  Expanded(child: Container()),
+                  const Spacer(),
                   Expanded(
                     flex: 2,
                     child: Image.network(
@@ -53,7 +53,7 @@ class _AddSongPageState extends State<AddSongPage> {
                       },
                     ),
                   ),
-                  Expanded(child: Container()),
+                  const Spacer(),
                 ],
               );
             },
