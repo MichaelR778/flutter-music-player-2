@@ -31,7 +31,7 @@ class _AddSongPageState extends State<AddSongPage> {
       body: ListView(
         children: [
           // image
-          BlocBuilder<PreviewCubit, PreviewState>(
+          BlocBuilder<PreviewCubit, String>(
             builder: (context, state) {
               return Row(
                 children: [
@@ -40,8 +40,8 @@ class _AddSongPageState extends State<AddSongPage> {
                     flex: 2,
                     child: Image.network(
                       width: double.infinity,
-                      height: double.infinity,
-                      state.imageUrl,
+                      // height: double.infinity,
+                      state,
                       fit: BoxFit.cover,
                       loadingBuilder: (context, child, loadingProgress) {
                         if (loadingProgress == null) return child;
